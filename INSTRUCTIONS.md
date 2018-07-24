@@ -42,6 +42,8 @@ if __name__ == "__main__":
 	main()
 ```
 
+Note that you will have to change `FILENAME` in the second line (`from FILENAME import Ui_MainWindow`) to match the filename used when you ran the `.ui` to `.py` conversion eariler.
+
 At this point, you should be able to run your script and see your GUI displayed. When you exit the application, your script should also exit (and return to the command line):
 ```sh
 python application.py

@@ -12,7 +12,7 @@ python -m PyQt5.uic.pyuic -x FILENAME.ui -o FILENAME.py
 ```
 
 #### Using the Python GUI Class
-First, copy the python template (`gui_template.py`) to act as your program, and name it something like `application.py`, making sure that the Python GUI class that was created earlier exists in the same folder:
+First, copy the code snippet below to be your program, and name the new file something like `application.py`, making sure that the Python GUI class that was created earlier exists in the same folder:
 ```py
 from PyQt5 import QtWidgets
 from FILENAME import Ui_MainWindow
@@ -46,6 +46,8 @@ At this point, you should be able to run your script and see your GUI displayed.
 ```sh
 python application.py
 ```
+
+As a reference, a full template copy of this example is available in the repository as `gui_template.py`.
 
 To import and use the GUI class (`FILENAME.py`), which defines the class `Ui_MainWindow`, you must first create a custom class `ApplicationWindow` that extends the class `PyQt5.QtWidgets.QMainWindow` (which provides the Qt5 application backend):
 ```py

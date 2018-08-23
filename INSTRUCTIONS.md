@@ -51,7 +51,7 @@ python application.py
 
 As a reference, a full template copy of this example is available in the repository as `gui_template.py`.
 
-To import and use the GUI class (`FILENAME.py`), which defines the class `Ui_MainWindow`, you must first create a custom class `ApplicationWindow` that extends the class `PyQt5.QtWidgets.QMainWindow` (which provides the Qt5 application backend):
+To import and use the GUI class (`FILENAME.py`), which defines the class `Ui_MainWindow`, first we have created a custom class `ApplicationWindow` that extends the class `PyQt5.QtWidgets.QMainWindow` (which provides the Qt5 application backend):
 ```py
 # The class that handles the application itself
 class ApplicationWindow(QtWidgets.QMainWindow):

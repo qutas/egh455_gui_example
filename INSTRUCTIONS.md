@@ -30,7 +30,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 
 # The "main()" function, like a C program
 def main():
-	print("Loading applicaiton...")
+	print("Loading application...")
 	app = QtWidgets.QApplication(sys.argv)
 	application = ApplicationWindow()
 	print("Application loaded.")

@@ -5,6 +5,9 @@ PyQt5 is the default pyqt package for Python 3.6, and can be installed using Ano
 conda install pyqt
 ```
 
+## Installing the rest of the QT Design Suite
+You can download the QT design suite [here](https://www.qt.io/download-qt-installer), in which _QT Creator_ is primarily used to allow graphical editting of the UI File.
+
 ## Preparing the Application
 The proccess below utilises the files `gui_template.py` and `example_window.ui`, which are both found in this repository. Before going further however, the `.ui` file must first be converted to a Python class (while it is not strictly necessary, it makes life a lot easier). To convert a `.ui` file to a Python class file, run the following command, replacing `FILENAME` with where appropriate (for the example, replace `FILENAME` with `example_window`):
 ```

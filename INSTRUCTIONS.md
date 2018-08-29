@@ -135,7 +135,7 @@ The main features of the GUI designer include:
     - `sizePolicy`: Primarily used for setting the minimum size of the GUI form that will be allowed (i.e. makes sure that the GUI is rendered such that all the elements can be seen)
   - Other Properties - Depending on the widget, many other properties are available. For example, for a button, the QAbstractButton properties allow for things like `text` (the text displayed on the button) to be set.
 
-####  Using Signals
+####  Using Signals & Methods
 As has been previously demonstrated, we can connect specific functionallity to cause updates to the GUI to trigger functions in our code to run. This is achieved by using the [Signal](http://doc.qt.io/qt-5/signalsandslots.html) interface in QT. Each widget has many types of signals that it emmits depending on how it is interacted with, so many so that a breif list cannot be provided. As an example however, let's look at some of the [primary signals available](http://doc.qt.io/qt-5/qabstractbutton.html#signals)with the QPushButton widget (which are inherited from the QAbstrctButton class):
 - `clicked(bool checked = false)`: Triggered when a user presses and releases the button in a "normal" fashion.
 - `pressed()`: Triggered whenever the button is depressed by the user.
@@ -147,5 +147,33 @@ As an example, the `clicked` signal is used in Python to attached a function to 
 self.ui.button_1.clicked.connect(self.callback_button_1)
 ```
 
-#### Adding a Video Player Widget
+#### Adding a Video Player (or Other Unlisted) Widget
+Some widgets are not displayed by default in the QT Designer Widget Box. To access unlisted widgets, you must first add a blank widget to your form, then "promote" it to the type you want:
+1. In the Wiget Box, navigate to the Containers section
+2. Drag in a blank "Widget" widget to a location on your form
+3. Right click on the blank widget, and select "Promote to ...", then set the following settings:
+   - `Base class name`: `QWidget`
+   - `Promote class name`: `QVideoWidget`
+   - `Header file`: `PyQt5.QtMultimediaWidgets`
+4. Press "Add", then press "Promote"
+5. Select the blank widget, then in the properties editor, rename it to: `video_widget`
+6. Save the `.ui` file, then regenerate the python file (See: Preparing the Application)
+6. In your python application file, add the following import:
+```py
+from PyQt5 import QtCore, QtMultimedia
+```
+7. In your python application file, in the `__init__()`, add in the following code:
+```py
+# Configure the video widget
+self.video_player = QtMultimedia.QMediaPlayer(None, QtMultimedia.QMediaPlayer.VideoSurface)
 
+# Load in a file to play
+file = QtCore.QDir.current().filePath("video.mp4")
+self.video_player.setMedia(QtMultimedia.QMediaContent(QtCore.QUrl.fromLocalFile(file)))
+self.video_player.setVideoOutput(self.ui.video_widget)
+
+# Start video playback
+self.video_player.play()
+```
+
+As a reference, the files `example_window_video.ui` and `gui_example_video.py` have been provided with a simple video widget implementation.

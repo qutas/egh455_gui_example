@@ -117,23 +117,23 @@ Running the application again, you should now see messages printing to the termi
 
 As previously mentioned, the file `example_window.ui` contains all of the inclusions and placment GUI elements for the application. To edit this easily, the program QT Designer can be used. Assuming you installed it earlier on in the process, you should be able to simple double click `example_window.ui` to open QT Desginer and begin editing the file.
 
-**TODO:** Picture of designer interface
+![QT Designer Interaface](https://raw.githubusercontent.com/qutas/egh455_gui_example/master/qt_designer.png)
 
 The main features of the GUI designer include:
-- **Widget Box** - provides a selection of widgets that can be used in the GUI design. To add a new widget, simply drag it from the Widtet Box onto the form area. Some notable ones include:
-  - [Label](http://doc.qt.io/qt-5/qlabel.html): Used to display text in the GUI
-  - [Line Edit](http://doc.qt.io/qt-5/qlineedit.html): Allows a user to input a string that can be extracted later on
-  - [Push Button](http://doc.qt.io/qt-5/qpushbutton.html): Acts as a regular button that can be used to call functions
-  - [Combo Box](http://doc.qt.io/qt-5/qcombobox.html): Allows selection of a preset list of inputs
-  - [Progress Bar](http://doc.qt.io/qt-5/qprogressbar.html): Can be used to display feedback to the user on function progress
-  - Video Widget: (Not directly accessible through the QT Desginer GUI) Allows for a video to be interacted with through the GUI.
-- **Object Inspector** - provides access the objects that are present in your GUI. It is important to take note of the names of the objects that are added (and that you can change them to whatever you like), as you must use these names to access the GUI elements through python. For example, one of the buttons is named `button_1`, which is then access with the variable `self.ui.button_1` once the GUI is loaded into Python.
-- **Property Editor** - provides access to the properties of the currently selected object. Some useful examples are:
-  - QObjectName: Sets the name of the
-  - QWidget - Common widget properties:
-    - `geometry`: used to set the GUI element location, as well as size
-    - `sizePolicy`: Primarily used for setting the minimum size of the GUI form that will be allowed (i.e. makes sure that the GUI is rendered such that all the elements can be seen)
-  - Other Properties - Depending on the widget, many other properties are available. For example, for a button, the QAbstractButton properties allow for things like `text` (the text displayed on the button) to be set.
+1. **Widget Box** - provides a selection of widgets that can be used in the GUI design. To add a new widget, simply drag it from the Widtet Box onto the form area. Some notable ones include:
+   - [Label](http://doc.qt.io/qt-5/qlabel.html): Used to display text in the GUI
+   - [Line Edit](http://doc.qt.io/qt-5/qlineedit.html): Allows a user to input a string that can be extracted later on
+   - [Push Button](http://doc.qt.io/qt-5/qpushbutton.html): Acts as a regular button that can be used to call functions
+   - [Combo Box](http://doc.qt.io/qt-5/qcombobox.html): Allows selection of a preset list of inputs
+   - [Progress Bar](http://doc.qt.io/qt-5/qprogressbar.html): Can be used to display feedback to the user on function progress
+   - Video Widget: (Not directly accessible through the QT Desginer GUI) Allows for a video to be interacted with through the GUI.
+2. **Object Inspector** - provides access the objects that are present in your GUI. It is important to take note of the names of the objects that are added (and that you can change them to whatever you like), as you must use these names to access the GUI elements through python. For example, one of the buttons is named `button_1`, which is then access with the variable `self.ui.button_1` once the GUI is loaded into Python.
+3. **Property Editor** - provides access to the properties of the currently selected object. Some useful examples are:
+   - QObjectName: Sets the name of the
+   - QWidget - Common widget properties:
+     - `geometry`: used to set the GUI element location, as well as size
+     - `sizePolicy`: Primarily used for setting the minimum size of the GUI form that will be allowed (i.e. makes sure that the GUI is rendered such that all the elements can be seen)
+   - Other Properties - Depending on the widget, many other properties are available. For example, for a button, the QAbstractButton properties allow for things like `text` (the text displayed on the button) to be set.
 
 ####  Using Signals & Methods
 As has been previously demonstrated, we can connect specific functionallity to cause updates to the GUI to trigger functions in our code to run. This is achieved by using the [Signal](http://doc.qt.io/qt-5/signalsandslots.html) interface in QT. Each widget has many types of signals that it emmits depending on how it is interacted with, so many so that a breif list cannot be provided. As an example however, let's look at some of the [primary signals available](http://doc.qt.io/qt-5/qabstractbutton.html#signals)with the QPushButton widget (which are inherited from the QAbstrctButton class):

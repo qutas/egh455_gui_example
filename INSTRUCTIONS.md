@@ -5,8 +5,8 @@ PyQt5 is the default pyqt package for Python 3.6, and can be installed using Ano
 conda install pyqt
 ```
 
-## Installing the rest of the QT Design Suite
-You can download the QT design suite [here](https://www.qt.io/download-qt-installer), in which _QT Creator_ is primarily used to allow graphical editting of the UI File.
+## Installing the rest of the QT Creator Suite
+Follow this link to download the [QT Creator Suite](https://www1.qt.io/offline-installers/?hsLang=en#section-11) for your OS. The alternative is to download the entire [Qt Framework Development Kit](https://www.qt.io/download-qt-installer), in which _QT Designer_ is the used to allow graphical editting of the UI File.
 
 ## Preparing the Application
 The proccess below utilises the files `gui_template.py` and `example_window.ui`, which are both found in this repository. Additionally, the file `gui_example.py` is provided as a reference of the completed python code that you should have by the end of this tutorial.
@@ -115,7 +115,7 @@ Running the application again, you should now see messages printing to the termi
 
 ## Designing a custom GUI
 
-As previously mentioned, the file `example_window.ui` contains all of the inclusions and placment GUI elements for the application. To edit this easily, the program QT Designer can be used. Assuming you installed it earlier on in the process, you should be able to simple double click `example_window.ui` to open QT Desginer and begin editing the file.
+As previously mentioned, the file `example_window.ui` contains all of the inclusions and placment GUI elements for the application. To edit this easily, the program Qt Creator/Designer can be used. Assuming you installed on of them earlier on in the process, you should be able to simple double click `example_window.ui` to open QT Desginer and begin editing the file.
 
 ![QT Designer Interaface](https://raw.githubusercontent.com/qutas/egh455_gui_example/master/qt_designer.png)
 

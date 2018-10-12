@@ -2,7 +2,7 @@
 
 PyQt5 is the default pyqt package for Python 3.6, and can be installed using Anoconda:
 ```sh
-conda install pyqt
+conda install -c anaconda pyqt
 ```
 
 ## Installing the rest of the QT Creator Suite

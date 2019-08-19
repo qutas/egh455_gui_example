@@ -6,7 +6,7 @@ conda install -c anaconda pyqt
 ```
 
 ## Installing the rest of the QT Creator Suite
-Follow this link to download the [QT Creator Suite](https://www1.qt.io/offline-installers/?hsLang=en#section-11) for your OS. The alternative is to download the entire [Qt Framework Development Kit](https://www.qt.io/download-qt-installer), in which _QT Designer_ is the used to allow graphical editting of the UI File.
+Follow this link to download the [QT Creator Suite](https://www.qt.io/offline-installers) for your OS. The alternative is to download the entire [Qt Framework Development Kit](https://www.qt.io/download-qt-installer), in which _QT Designer_ is the used to allow graphical editting of the UI File.
 
 ## Preparing the Application
 The proccess below utilises the files `gui_template.py` and `example_window.ui`, which are both found in this repository. Additionally, the file `gui_example.py` is provided as a reference of the completed python code that you should have by the end of this tutorial.
